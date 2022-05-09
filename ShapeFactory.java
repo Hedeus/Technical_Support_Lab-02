@@ -20,7 +20,14 @@ public class ShapeFactory
     public Paint paint;
     public int width;
     public int height;
-    
+
+    /**
+     * Method for shape selection
+     * @param shape_type declares color and shape
+     *                   На вхід приймається ціле двозначне (наразі) число
+     *                   Результат ділення націло визначає форму фігури
+     *                   Залишок від ділення визначає спосіб зафарбовування
+     */
     public ShapeFactory(final int shape_type) {
         this.width = 25;
         this.height = 25;
@@ -81,7 +88,15 @@ public class ShapeFactory
             }
         }
     }
-    
+
+    /**
+     * Methot for star creating
+     * @param arms визначає кількість зовнішніх кутів
+     * @param center визначає зміщення фігури від базово місця розташування
+     * @param rOuter відповідає за розмір променів зірки (віддалення зовнішніх кутів від центра)
+     * @param rInner відповідає за віддалення внутрішніх кутів від центра фігури
+     * @return
+     */
     private static Shape createStar(final int arms, final Point center, final double rOuter, final double rInner) {
         final double angle = 3.141592653589793 / arms;
         final GeneralPath path = new GeneralPath();

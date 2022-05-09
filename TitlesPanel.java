@@ -36,7 +36,11 @@ public class TitlesPanel extends JPanel implements ActionListener
             this.repaint();
         }
     }
-    
+
+    /**
+     * Метод наповнення вікна фігурами
+     * @param g
+     */
     private void doDrawing(final Graphics g) {
         this.is_done = false;
         (this.g2d = (Graphics2D)g).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
